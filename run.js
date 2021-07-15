@@ -1,5 +1,4 @@
-window.onload = function ()
-{
-    FetchAllData();
-   
-}
+window.onload = function () {
+  FetchAllData();
+  SelectAllData();
+};

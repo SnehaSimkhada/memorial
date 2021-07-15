@@ -7,19 +7,27 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Memorial</title>
 </head>
 <body>
     <div class="w3-top">
-        <div class="w3-bar w3-theme-d2 w3-left-align">
-            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2"
-                href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-            <a href="index.html" class="w3-bar-item w3-button w3-blue"><i
-                    class="fa fa-home w3-margin-right"></i>Home</a>
-           
-            </div>
-            
+
+    
+            <div class="w3-bar w3-theme-d2 w3-left-align">
+                <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2"
+                    href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+                <a href="index.html" class="w3-bar-item w3-button w3-blue"><i
+                        class="fa fa-home w3-margin-right"></i>Home</a>
+                        <a href="#search" class="w3-bar-item w3-button w3-green w3-right">Search</a>
+                </div>
+                
+         
+
+
+
+
+       
             <div class="w3-bar w3-black">
                 <a href="index.html" class="w3-bar-item w3-button">A</a>
                 <a href="#b" class="w3-bar-item w3-button">B</a>
@@ -56,14 +64,13 @@
             
         </div>
     </div>
-    <H1>
+  
 
 
       <br>
       <br>
       <br>  
-      <input class="w3-input w3-padding" type="text" placeholder="Search by Name.." id="myInput" onkeyup="myFunction()">
-    </H1>
+     
     <div id = 'myDiv'>
         <ul class="w3-leftbar w3-margin w3-card w3-padding w3-theme-border w3-sand" style="list-style:none" id = "list" >
         </ul>
@@ -75,34 +82,60 @@
   <!-- Firebase Initialization -->
   <script type="text/javascript" src="firebase.js"></script>
   <script type="text/javascript" src="list.js"></script>
+  <br>
+  <br>
   
+  <div  id = 'search' class = 'w3-center' >
+
+    <h3>Search Here...</h3>
   
-    </div>
+    <button class="w3-button w3-green" onclick="document.getElementById('id01').style.display='block'">Click and Scroll</button> 
+
+    <div id="id01" class="w3-panel w3-display-container" style="display:none">
+        <span onclick="this.parentElement.style.display='none'"
+        class="w3-button w3-red w3-display-topright">x</span>
+        <div>
+    <input type="number" id="Columnnum" onkeyup="myFunction()" placeholder="Type Column Number" title="Type in the column number">
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search here.." title="Type in a name">
+<br><br>
+
+
+<br><br>
+
+<style>
+html,
+body {
+  font-family: arial, sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table tr td {
+  border: 1px solid #000;
+  padding: 10px;
+}
+
+table tr:nth-child(odd) {
+  background: rgb(236, 238, 240);
+}
+</style>
+
+<script src="search.js"></script>
+
+<div id="showData"></div>
+<script type="text/javascript" src="table.js"></script>
+</div>
+</div>
+</div>
     <script type="text/javascript" src="run.js"></script>
     
 
 
 
 
-    <!-- search -->
-<script>
-  function myFunction() {
-    var input, filter, ul, li, a, i;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    div = document.getElementById("list");
-    li = div.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        txtValue = li[i].textContent || li[i].innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } 
-        else {
-            li[i].style.display = "none";
-        }
-    }
-}
-
+   <script>
         // Script for side navigation
         function w3_open() {
             var x = document.getElementById("mySidebar");

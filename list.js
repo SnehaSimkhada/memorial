@@ -101,6 +101,7 @@ function FetchAllData() {
           p.setAttribute("id", id);
           document.body.appendChild(p);
         }
+
         const alphabet = "al";
         switch (a.charAt(0)) {
           case "A":
