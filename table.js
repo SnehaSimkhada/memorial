@@ -40,9 +40,20 @@ function SelectAllData() {
           if (cellContent === undefined) {
             cellContent = "";
           }
+
           //gender td
           // if the strings starts with "https://" then dom create hyperlink
           if (
+            typeof cellContent === "string" &&
+            cellContent.indexOf(
+              "https://firebasestorage.googleapis.com/v0/b"
+            ) === 0
+          ) {
+            var img = document.createElement("img");
+            img.src = cellContent;
+            img.width = "100";
+            tabCell.append(img);
+          } else if (
             typeof cellContent === "string" &&
             cellContent.indexOf("http") === 0
           ) {

@@ -14,7 +14,7 @@ function addItemsToList(a, b, c, d, e, f, g, h, i, j) {
   var _j = document.createElement("li");
   var _space = document.createElement("li");
 
-  var labelA = "<b>Alphabet:</b> ";
+  // var labelA = "<b>Alphabet:</b>";
   var labelB = "Name: ";
   var lableC = "War: ";
 
@@ -22,19 +22,125 @@ function addItemsToList(a, b, c, d, e, f, g, h, i, j) {
   var lableE = "Services: ";
   var lableF = "Rank: ";
 
-  var lableH = "Test: ";
+  var lableH = "Image: ";
   // var lableI = 'test: ';
   // var lableJ = 'test';
 
-  _a.innerHTML = labelA + a;
+  //Navigation functionality
+
+  document.getElementsByTagName("li");
+  function createElementForMe(id) {
+    const p = document.createElement("p");
+    p.setAttribute("id", id);
+    document.body.appendChild(p);
+    _a.append(p);
+    // _a.innerHTML = a;
+  }
+
+  switch (a.charAt(0)) {
+    case "A":
+      4;
+      createElementForMe("a");
+      break;
+    case "B":
+      createElementForMe("b");
+      break;
+    case "C":
+      createElementForMe("c");
+      break;
+    case "D":
+      createElementForMe("d");
+      break;
+    case "E":
+      createElementForMe("e");
+      break;
+    case "F":
+      createElementForMe("f");
+      break;
+    case "G":
+      createElementForMe("g");
+      break;
+    case "H":
+      createElementForMe("h");
+      break;
+    case "I":
+      createElementForMe("i");
+      break;
+    case "J":
+      createElementForMe("j");
+      break;
+    case "K":
+      createElementForMe("k");
+      break;
+    case "L":
+      createElementForMe("l");
+      break;
+    case "M":
+      createElementForMe("m");
+      break;
+    case "N":
+      createElementForMe("n");
+      break;
+    case "O":
+      createElementForMe("o");
+      break;
+    case "P":
+      createElementForMe("p");
+      break;
+    case "Q":
+      createElementForMe("q");
+      break;
+    case "R":
+      createElementForMe("r");
+      break;
+    case "S":
+      createElementForMe("s");
+      break;
+    case "T":
+      createElementForMe("t");
+      break;
+    case "U":
+      createElementForMe("u");
+      break;
+    case "V":
+      createElementForMe("v");
+      break;
+    case "W":
+      createElementForMe("w");
+      break;
+    case "X":
+      createElementForMe("x");
+      break;
+    case "Y":
+      createElementForMe("y");
+      break;
+    case "Z":
+      createElementForMe("z");
+      break;
+    default:
+      return;
+  }
+
   _g.innerHTML = labelB;
   _c.innerHTML = lableC + c;
   _d.innerHTML = lableD + d;
   _e.innerHTML = lableE + e;
   _f.innerHTML = lableF + f;
-  // _h.innerHTML  =  lableH + h ;
+
+  //Picture functionality
+  if (
+    typeof h === "string" &&
+    h.indexOf("https://firebasestorage.googleapis.com/v0/b") === 0
+  ) {
+    var img = document.createElement("img");
+    img.src = h;
+    img.width = "200";
+    _h.append(img);
+  }
   _i.innerHTML = lableH;
   // _j.innerHTML  =   lableJ +j ;
+
+  _space.innerHTML = "  .  ";
   _space.innerHTML = "  .  ";
 
   ul.appendChild(_a);
@@ -49,6 +155,8 @@ function addItemsToList(a, b, c, d, e, f, g, h, i, j) {
   ul.appendChild(_j);
   ul.appendChild(_space);
 
+  //Link functionality
+
   if (g.indexOf("http") === 0) {
     var a = document.createElement("a");
     var link = document.createTextNode(b);
@@ -59,7 +167,7 @@ function addItemsToList(a, b, c, d, e, f, g, h, i, j) {
     document.body.appendChild(a);
     _g.append(a);
   } else {
-    _g.innerHTML = "Name: " + g;
+    _g.innerHTML = g;
   }
 
   if (i.indexOf("http") === 0) {
@@ -72,7 +180,7 @@ function addItemsToList(a, b, c, d, e, f, g, h, i, j) {
     document.body.appendChild(a);
     _i.append(a);
   } else {
-    _i.innerHTML = "Name: " + i;
+    _i.innerHTML = i;
   }
 }
 
@@ -94,97 +202,6 @@ function FetchAllData() {
         let j = ChildSnapshot.val().J;
 
         addItemsToList(a, b, c, d, e, f, g, h, i, j);
-        document.querySelectorAll("li");
-
-        function createElementForMe(id) {
-          const p = document.createElement("p");
-          p.setAttribute("id", id);
-          document.body.appendChild(p);
-        }
-
-        const alphabet = "al";
-        switch (a.charAt(0)) {
-          case "A":
-            createElementForMe("a");
-            break;
-          case "B":
-            createElementForMe("b");
-            break;
-          case "C":
-            createElementForMe("c");
-            break;
-          case "D":
-            createElementForMe("d");
-            break;
-          case "E":
-            createElementForMe("e");
-            break;
-          case "F":
-            createElementForMe("f");
-            break;
-          case "G":
-            createElementForMe("g");
-            break;
-          case "H":
-            createElementForMe("h");
-            break;
-          case "I":
-            createElementForMe("i");
-            break;
-          case "J":
-            createElementForMe("j");
-            break;
-          case "K":
-            createElementForMe("k");
-            break;
-          case "L":
-            createElementForMe("l");
-            break;
-          case "M":
-            createElementForMe("m");
-            break;
-          case "N":
-            createElementForMe("n");
-            break;
-          case "O":
-            createElementForMe("o");
-            break;
-          case "P":
-            createElementForMe("p");
-            break;
-          case "Q":
-            createElementForMe("q");
-            break;
-          case "R":
-            createElementForMe("r");
-            break;
-          case "S":
-            createElementForMe("s");
-            break;
-          case "T":
-            createElementForMe("t");
-            break;
-          case "U":
-            createElementForMe("u");
-            break;
-          case "V":
-            createElementForMe("v");
-            break;
-          case "W":
-            createElementForMe("w");
-            break;
-          case "X":
-            createElementForMe("x");
-            break;
-          case "Y":
-            createElementForMe("y");
-            break;
-          case "Z":
-            createElementForMe("z");
-            break;
-          default:
-            return;
-        }
       });
     });
 }
