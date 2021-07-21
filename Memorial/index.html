@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link href = "https://fonts.googleapis.com/css?family=Nunito" rel='stylesheet'>
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Memorial</title>
+</head>
+<body>
+    <div class="w3-top">
+
+    
+            <div class="w3-bar w3-theme-d2 w3-left-align">
+                <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2"
+                    href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+                <a href="index.html" class="w3-bar-item w3-button w3-blue"><i
+                        class="fa fa-home w3-margin-right"></i>Home</a>
+                        <a href="#search" class="w3-bar-item w3-button w3-green w3-right">Search</a>
+                </div>
+                
+         
+
+
+
+
+       
+            <div class="w3-bar w3-black">
+                <a href="#a" class="w3-bar-item w3-button">A</a>
+                <a href="#b" class="w3-bar-item w3-button">B</a>
+                <a href="#c" class="w3-bar-item w3-button">C</a>
+                <a href="#d" class="w3-bar-item w3-button">D</a>
+                <a href="#e" class="w3-bar-item w3-button">E</a>
+                <a href="#f" class="w3-bar-item w3-button">F</a>
+                <a href="#g" class="w3-bar-item w3-button">G</a>
+                <a href="#h" class="w3-bar-item w3-button">H</a>
+                <a href="#i" class="w3-bar-item w3-button">I</a>
+                <a href="#j" class="w3-bar-item w3-button">J</a>
+                <a href="#k" class="w3-bar-item w3-button">K</a>
+                <a href="#l" class="w3-bar-item w3-button">L</a>
+                <a href="#m" class="w3-bar-item w3-button">M</a>
+                <a href="#n" class="w3-bar-item w3-button">N</a>
+                <a href="#o" class="w3-bar-item w3-button">O</a>
+                <a href="#p" class="w3-bar-item w3-button">P</a>
+                <a href="#q" class="w3-bar-item w3-button">Q</a>
+                <a href="#r" class="w3-bar-item w3-button">R</a>
+                <a href="#s" class="w3-bar-item w3-button">S</a>
+                <a href="#t" class="w3-bar-item w3-button">T</a>
+                <a href="#u" class="w3-bar-item w3-button">U</a>
+                <a href="#v" class="w3-bar-item w3-button">V</a>
+                <a href="#w" class="w3-bar-item w3-button">W</a>
+                <a href="#x" class="w3-bar-item w3-button">X</a>
+                <a href="#y" class="w3-bar-item w3-button">Y</a>
+                <a href="#z" class="w3-bar-item w3-button">Z</a>
+              </div>
+              
+        </div>
+
+        <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+            <a href= "index.html" class="w3-bar-item w3-button">Home</a>
+            
+        </div>
+    </div>
+  
+
+
+      <br>
+      <br>
+      <br>  
+     
+    <div id = 'myDiv'>
+        <ul class="w3-leftbar w3-margin w3-card w3-padding w3-theme-border w3-sand" style="list-style:none" id = "list" >
+        </ul>
+
+        <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
+        
+  <!-- Firebase Initialization -->
+  <script type="text/javascript" src="firebase.js"></script>
+  <script type="text/javascript" src="list.js"></script>
+  <br>
+  <br>
+  
+  <div  id = 'search' class = 'w3-center' >
+
+    <h3>Search Here...</h3>
+  
+    <button class="w3-button w3-green" onclick="document.getElementById('id01').style.display='block'">Click and Scroll</button> 
+
+    <div id="id01" class="w3-panel w3-display-container" style="display:none">
+        <span onclick="this.parentElement.style.display='none'"
+        class="w3-button w3-red w3-display-topright">x</span>
+        <div>
+    
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search here.." title="Type in a name">
+<br><br>
+
+
+<br><br>
+
+<style>
+html,
+body {
+  font-family: arial, sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table tr td {
+  border: 1px solid #000;
+  padding: 10px;
+}
+
+table tr:nth-child(odd) {
+  background: rgb(236, 238, 240);
+}
+</style>
+
+
+
+<div id="showData"></div>
+<script type="text/javascript" src="table.js"></script>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="search.js"></script>
+
+<script src = 'https://code.jquery.com/jquery-3.1.0.js'></script>
+    <script type="text/javascript" src="run.js"></script>
+    
+
+
+
+
+   <script>
+
+        // Script for side navigation
+        function w3_open() {
+            var x = document.getElementById("mySidebar");
+            x.style.width = "300px";
+            x.style.paddingTop = "10%";
+            x.style.display = "block";
+        }
+
+        // Close side navigation
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+
+        // Used to toggle the menu on smaller screens when clicking on the menu button
+        function openNav() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            }
+            else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+</body>
+</html>
